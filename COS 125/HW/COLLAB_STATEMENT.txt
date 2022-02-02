@@ -1,0 +1,14 @@
+# File:parent_hw  #####   .py
+# Author: Jeffery Parent
+# Date: 
+# Section: 1006 
+# E-mail: Jeffery_parent@maine.edu
+
+# Description:
+# 
+
+# Collaboration:
+# 
+
+
+# I didn't discuss this assingment with anyone.

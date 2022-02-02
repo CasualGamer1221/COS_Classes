@@ -1,0 +1,10 @@
+1 Jim 50000
+6 Paula 60000
+9 Phil 32000
+10 Lisa 99000
+43 Wesley 12000
+78 John 5000
+99 Emma 152000
+104 Cecilia 74000
+180 Jennifer 34000
+204 Martha 76000
