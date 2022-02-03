@@ -6,6 +6,8 @@ public class ParkingSpot {
 	public ParkingSpot(boolean Handicap) {
 		this.Handicap = Handicap;
 		
+		//????????????????
+		this.type = new Car(null, null, null, Handicap);
 	}
 	
 }
