@@ -1,13 +1,15 @@
 
 public class ParkingSpot {
-	Car type;
-	boolean Handicap = false;
+	
+	Car car1;
+	Car car2;
 	
 	public ParkingSpot(boolean Handicap) {
-		this.Handicap = Handicap;
-		
-		//????????????????
-		this.type = new Car(null, null, null, Handicap);
+		 	Car car1 = new Car("Lexus","RX","Blue",Handicap);
+		 	Car car2 = new Car("Ford","Explorer",null,Handicap);
+		 	
+		 	this.car1 = car1;
+		 	this.car2 = car2;
 	}
 	
 }
