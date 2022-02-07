@@ -6,18 +6,17 @@ public class ParkingLot {
 	int handicapped;
 	int normal;
 	
-	
+	//creates array of 20 parking spots
 	ParkingSpot[] spots = new ParkingSpot[20];
 	
+	//instantiates class ParkingSpot 20 times for each spot
 	public ParkingLot(){
-		
 		for(int j = 0; j < 20; j++){
 			spots[j] = new ParkingSpot(j);
-		
 		}
 	}
 
-	
+	//sets the count of handicapped spots and normal spots 
 	public String toString() {
 		handicapped = 0;
 		normal = 0;
