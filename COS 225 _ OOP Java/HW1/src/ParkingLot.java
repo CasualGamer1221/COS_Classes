@@ -20,4 +20,23 @@ public class ParkingLot {
 		}
 	}
 	
+	public String toString() {
+		return handicapped + " " + normal + "\n";	
+	}
+	
+	public void park(boolean handicap){
+		if (handicap){
+			handicapped -= 1;
+			}else {
+				normal -= 1;
+		}
+	}
+	
+	public void leave(boolean handicap) {
+		if (handicap) {
+			handicapped += 1;
+		}else {
+			normal += 1;
+		}
+	}
 }
