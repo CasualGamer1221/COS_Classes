@@ -7,16 +7,16 @@ public class ParkingTester {
 		System.out.print(lot1.toString());
 		
 		Car car1 = new Car("Lexus","RX","Blue",true);
-		lot1.park(car1.handicapAccessible);
+		int car1_index = lot1.park(car1);
 		
 		System.out.print(lot1.toString());
 		
 		Car car2 = new Car("Ford","Explorer","",false);
-		lot1.park(car2.handicapAccessible);
+		lot1.park(car2);
 		
 		System.out.println(lot1.toString());
 		
-		lot1.leave(car1.handicapAccessible);
+		lot1.leave(car1_index);
 		
 		System.out.println(lot1.toString()); 
 	}

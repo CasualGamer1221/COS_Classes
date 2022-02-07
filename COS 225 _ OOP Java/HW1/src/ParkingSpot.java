@@ -1,13 +1,30 @@
 
 public class ParkingSpot {
 	
-	String car1;
-	Car car2;
-	Car handicap;
+	Car car1;
+	boolean handicap;
+	int index;
 	
-	public ParkingSpot(boolean Handicap) {
-		// Car car1 = new Car()
-		 	
+	
+	public ParkingSpot(int index) {
+		if (index < 4) {
+			handicap = true;
+		}
+		else {
+			handicap = false;
+		}
+		this.index = index;
 	}
 	
+	public ParkingSpot(Car car1, int index) {
+		if (index < 4) {
+			handicap = true;
+		}
+		else {
+			handicap = false;
+		}
+		
+		this.index = index;
+		this.car1 = car1;
+	}
 }

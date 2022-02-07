@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 
 public class ParkingLot {
 	ParkingSpot spot;
@@ -6,37 +6,53 @@ public class ParkingLot {
 	int handicapped;
 	int normal;
 	
+	
+	ParkingSpot[] spots = new ParkingSpot[20];
+	
 	public ParkingLot(){
-		ArrayList<ParkingSpot> spots = new ArrayList<ParkingSpot>();
 		
-		for(int j = 0; j < 17; j++){
-			spots.add(new ParkingSpot(false));
-			this.normal = j;
-			
-		}
-		for(int i = 0; i < 5; i++){
-			spots.add(new ParkingSpot(true));
-			this.handicapped = i;
+		for(int j = 0; j < 20; j++){
+			spots[j] = new ParkingSpot(j);
+		
 		}
 	}
+
 	
 	public String toString() {
-		return handicapped + " " + normal + "\n";	
+		handicapped = 0;
+		normal = 0;
+		for (int i = 0; i < 20; i++) {
+			
+			if (spots[i].car1 == null) {
+				if (spots[i].handicap == true) {
+					handicapped++;
+				}
+				else {
+					normal++;
+				}
+			}
+		}
+		return handicapped + " " + normal + "\n";
 	}
 	
-	public void park(boolean handicap){
-		if (handicap){
-			handicapped -= 1;
-			}else {
-				normal -= 1;
+	public int park(Car car){
+		for (int i = 0; i < 20; i++) {
+			if (spots[i].car1 == null && spots[i].handicap == car.handicapAccessible) {
+				spots[i].car1 = car;
+				return i;
+			}
+			if (spots[i].car1 == null && spots[i].handicap == false && car.handicapAccessible == true) {
+				spots[i].car1 = car;
+				return i;
+			}
 		}
+		return -1;
 	}
 	
-	public void leave(boolean handicap) {
-		if (handicap) {
-			handicapped += 1;
-		}else {
-			normal += 1;
-		}
+	public Car leave(int index) {
+		Car cartype = spots[index].car1;
+		spots[index].car1 = null;
+		return cartype;
 	}
+	
 }
