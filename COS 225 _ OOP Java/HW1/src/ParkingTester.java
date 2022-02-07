@@ -19,6 +19,7 @@ public class ParkingTester {
 		//un-parks the first car
 		lot1.leave(car1_index);
 		System.out.println(lot1.toString()); 
+		
 	}
 
 }
