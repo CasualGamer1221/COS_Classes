@@ -2,7 +2,8 @@
 public class PatientManager {
 	/*Creates empty array of Patient*/
 	Patient[] patients = new Patient[6];
-	/************************************/
+	
+	
 	/*DEFAULT
 	 * Sets each value in array to be null*/
 	public PatientManager() {
@@ -10,6 +11,7 @@ public class PatientManager {
 			patients[i] = null;
 		}
 	}
+	
 	
 	/*Adds patient to array given Patient object
 	 * Returns -1 if error occurs*/
@@ -23,12 +25,14 @@ public class PatientManager {
 		return -1;
 	}
 	
+	
 	/*Removes patient from array if given patient id*/
 	public Patient removePatient(int index) {
 		Patient patient = patients[index];
 		patients[index] = null;
 		return patient;
 	}
+	
 	
 	/*When called will simulate absorption of caffeine and will remove 130 caffeine from each patient in the array
 	 * if caffeine level of any patient is 0 or less after, they will be removed from the array */
@@ -45,6 +49,7 @@ public class PatientManager {
 			}
 		}
 	}
+	
 	
 	/*Returns a string representation of the array
 	 * returns EMPTY if there are no patients in the array*/

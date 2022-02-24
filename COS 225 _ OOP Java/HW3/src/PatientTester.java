@@ -6,6 +6,7 @@ public class PatientTester {
 		PatientManager patientManager = new PatientManager();
 		System.out.println(patientManager);
 		
+		
 		/*Adds 4 patients to the array with pre-specified values & prints the result*/
 		for (int i=1; i<5; i++) {
 			Patient patient = new Patient(i,i*100);
@@ -13,9 +14,11 @@ public class PatientTester {
 		}
 		System.out.println(patientManager);
 		
+		
 		/*Calls the caffeineAbsorbtion method of this instance of patientManager & prints the result*/
 		patientManager.caffeineAbsorbtion();
 		System.out.println(patientManager);
+		
 		
 		/*Finds the patient in the array with the maximum value of caffeine & removes them from the array
 		 * result is then printed*/
@@ -24,8 +27,7 @@ public class PatientTester {
 			if (patientManager.patients[i] != null && patientManager.patients[i].caffeine_level > maxcaffid) {
 				maxcaffid = i;
 			}
-			else {continue; 
-			}
+			else {continue;}
 		}
 		patientManager.removePatient(maxcaffid);
 		System.out.println(patientManager);
