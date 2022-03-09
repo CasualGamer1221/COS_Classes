@@ -6,7 +6,6 @@ public class BookShelf {
 	char bookshelf_letter;
 	ArrayList<Book> books = new ArrayList<>(8);
 
-	
 	/* Default constructor , setting each value in ArrayList to null */
 	public BookShelf() {
 		for (int i = 0; i < 8; i++) {
@@ -14,7 +13,6 @@ public class BookShelf {
 		}
 	}
 
-	
 	/* getters and setters */
 	public char get_bookshelfLetter() {
 		return bookshelf_letter;
@@ -28,7 +26,6 @@ public class BookShelf {
 		return books;
 	}
 
-	
 	/* Adds book to BookShelf if the 1st character of the book title matches the character for the bookshelf_letter
 	 * and if there is room on the BookShelf*/
 	public void addbook(Book book) {
@@ -46,7 +43,6 @@ public class BookShelf {
 			}
 	}
 
-	
 	/* Removes book from BookShelf */
 	public void removebook(Book book) {
 		books.remove(book);
