@@ -53,11 +53,11 @@ public class BookShelf {
 	@Override
 	public String toString() {
 		String output_string = "";
-		int items = 8;
+		int items = 0;
 		for (int i = 0; i < 8; i++) {
 			if (books.get(i) != null) {
 				output_string += (books.get(i).title + "   ");
-				items--;
+				items++;
 			} 
 			else if (items == 0) {
 				return "Empty";
