@@ -13,7 +13,7 @@ void swap(int *x, int *y){
         return;
 }
 
-/*Ranks student's grades by changing the variable's pointers*/
+/*Ranks student's grades in ascending order*/
 void rankStudentGrades(int *grade1, int *grade2, int *grade3){
 	if(*grade1 > *grade2){
 		swap(&*grade1,&*grade2);
