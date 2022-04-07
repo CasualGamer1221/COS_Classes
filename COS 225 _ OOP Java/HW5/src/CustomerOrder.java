@@ -11,15 +11,17 @@ public class CustomerOrder {
 		this.quantity = 0;
 	}
 	
+	/*sets up a customer order*/
 	public CustomerOrder(String name, String date, int quantity) {
 		this.name = name;
 		this.date = date;
 		this.quantity = quantity;
 	}
 	
-	public void shipProduct(String name, String date, int quantity) {
-		if(quantity >= 1) {
-			this.quantity = quantity - 1;
+	/*ships this customer a product unless quantity would become negative*/
+	public void shipProduct() {
+		if(this.quantity >= 1) {
+			this.quantity -= 1;
 		}
 		else {
 			return;

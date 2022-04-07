@@ -30,7 +30,7 @@ public class OrderQueue {
 	/*Implements a method that will take the customer at the front of the queue, and fulfill one of their orders
 	 * removes customer from queue if quantity == 0 */
 	public void completeOrder() {
-		orders.getFront().quantity -= 1;
+		orders.getFront().shipProduct();
 		this.stock -= 1;
 		
 		if(orders.getFront().quantity == 0) {
