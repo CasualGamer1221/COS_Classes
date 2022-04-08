@@ -20,6 +20,7 @@ public class OrderQueue {
 	/*Implements a method to add a new order to the queue*/
 	public void newOrder(CustomerOrder order) {
 		orders.enqueue(order);
+		queuesize += 1;
 	}
 	
 	/*Implements a method to add additional stock*/
@@ -35,6 +36,7 @@ public class OrderQueue {
 		
 		if(orders.getFront().quantity == 0) {
 			orders.dequeue();
+			queuesize -= 1;
 		}
 	}
 	
